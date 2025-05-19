@@ -4,7 +4,7 @@ import pandas as pd
 app = Flask(__name__)
 
 df = pd.read_csv("dados/apostilas.csv")
-df['valor'] = df['valor'].str.replace(',', '.').astype(float)
+df['valor'] = df['valor'].apply(lambda x: str(x).replace(',', '.')).astype(float)
 
 def mapear_periodo(p):
     if isinstance(p, str) and p.lower() == "anual":
