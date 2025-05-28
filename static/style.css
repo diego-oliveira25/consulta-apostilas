@@ -1,0 +1,101 @@
+body {
+  background: linear-gradient(to right, #d0ebff, #f0f9ff);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1c3c6e;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.checkbox-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.resultado {
+  margin-top: 30px;
+}
+
+#total {
+  font-size: 1.3rem;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.lista-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background-color: #f8fbff;
+  padding: 15px 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  border-left: 4px solid #339af0;
+}
+
+.card strong {
+  display: block;
+  color: #1c3c6e;
+  margin-top: 6px;
+}

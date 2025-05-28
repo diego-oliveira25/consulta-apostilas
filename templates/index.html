@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consulta de Apostilas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>📚 Consulta de Preço de Apostilas</h1>
+
+      <div class="form-group">
+        <label for="ano">Ano:</label>
+        <select id="ano">
+          <option value="">Selecione o ano</option>
+          {% for a in anos %}
+            <option value="{{ a }}">{{ a }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="serie">Série:</label>
+        <select id="serie">
+          <option value="">Selecione</option>
+          {% for s in series %}
+            <option value="{{ s }}">{{ s }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Bimestres:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="1º Bimestre"> 1º Bimestre</label>
+          <label><input type="checkbox" value="2º Bimestre"> 2º Bimestre</label>
+          <label><input type="checkbox" value="3º Bimestre"> 3º Bimestre</label>
+          <label><input type="checkbox" value="4º Bimestre"> 4º Bimestre</label>
+          <label><input type="checkbox" value="Anual" checked> Apostilas anuais</label>
+        </div>
+      </div>
+
+      <button class="btn" onclick="consultar()">📊 Consultar</button>
+
+      <div class="resultado">
+        <h2 id="total">Total: R$ 0,00</h2>
+        <div id="lista" class="lista-cards"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
